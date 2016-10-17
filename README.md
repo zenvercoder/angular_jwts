@@ -38,3 +38,23 @@
 * index.html, another script tag. serving a file from the server. `<script src="./app.js"></script>` recheck index.html in browser. Open up dev tools to make sure scripts are being called.
 
 * github: make new repo, add files, commit, remote add origin, git push -u origin master
+
+* index.html `<ng-view></ng-view>`
+
+* app.js 
+`.config(function($routeProvider, $locationProvider){
+      $routeProvider
+          .when('/', {
+              template: '<h1>Hello from angular route</h1>'
+          })
+  });
+  
+* browser asks expressfor home page (get /) 
+* browser does a get to ng-route, comes back w ng-route.
+* browser does a get for app.js
+* app.js change template:` '<h1>Hello from angular route</h1>'`
+to `templateURL: '/login/login.template.html`
+
+* mkdir `public/login` make form inside of this
+
+* 
